@@ -1771,7 +1771,7 @@ footer {
 
 .footer-grid-container {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: 60px;
     margin-bottom: 50px;
 }
@@ -1888,17 +1888,6 @@ footer {
     color: var(--text-secondary);
 }
 
-@media (max-width: 768px) {
-    .footer-grid-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-}
-
-/* ==========================================================================
-   RESPONSIVE DESIGN (MEDIA QUERIES)
-   ========================================================================== */
-
 @media (max-width: 968px) {
     .hero-grid {
         grid-template-columns: 1fr;
@@ -1943,6 +1932,10 @@ footer {
     
     .project-mockup-wrap {
         order: -1;
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
     
     .achievements-grid {
@@ -1956,13 +1949,24 @@ footer {
     }
 }
 
+@media (max-width: 768px) {
+    .floating-ui-card {
+        display: none; /* Hide floating cards that break viewport margins */
+    }
+    
+    .footer-grid-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
+
 @media (max-width: 600px) {
     .header-container {
         height: 60px;
     }
     
     .nav-menu {
-        display: none; /* Can build a simplified navigation or keep standard links */
+        display: none;
     }
     
     .section {
@@ -1991,10 +1995,48 @@ footer {
     }
     
     .timeline-item {
-        padding-left: 50px;
+        padding-left: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .timeline-card {
+        padding: 20px;
     }
     
     .contact-form-card {
         padding: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Scaling device mockups to fit screen width */
+    .device-frame-3d {
+        width: 250px;
+        height: 510px;
+        padding: 8px;
+        border-radius: 30px;
+    }
+    
+    .device-screen {
+        border-radius: 24px;
+    }
+    
+    .project-device {
+        width: 220px;
+        height: 450px;
+        border-radius: 28px;
+        padding: 6px;
+    }
+    
+    .project-app-screen {
+        border-radius: 22px;
+    }
+    
+    /* Minimize logo text overflow on ultra small screens */
+    .logo span {
+        display: none;
+    }
+    .logo::after {
+        content: "Ved";
     }
 }
