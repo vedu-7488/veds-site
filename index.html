@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ved Prakash Mishra | Premium iOS Developer Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portfolio of Ved Prakash Mishra, an iOS Developer with 2+ years of experience specializing in Swift, SwiftUI, UIKit, Clean Architecture (MVVM), REST/GraphQL, WebSockets, and Performance Optimization.">
+    <meta name="keywords" content="Ved Prakash Mishra, iOS Developer, Swift, SwiftUI, UIKit, MVVM, Clean Architecture, iOS Portfolio, Mobile Engineer, India Developer">
+    <meta name="author" content="Ved Prakash Mishra">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark"> <!-- Defaulting to dark mode for rich premium aesthetic -->
+
+    <!-- Ambient mouse glow light -->
+    <div id="glow-spotlight"></div>
+
+    <!-- Sticky Header Navigation -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i data-lucide="smartphone"></i>
+                <span>Ved</span>.dev
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link active">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="header-actions">
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light/dark theme">
+                    <span class="theme-icon theme-icon-sun">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="4.25"></circle>
+                            <path d="M12 2.5v2.5M12 19v2.5M21.5 12H19M5 12H2.5M18.72 5.28l-1.77 1.77M7.05 16.95l-1.77 1.77M18.72 18.72l-1.77-1.77M7.05 7.05 5.28 5.28"></path>
+                        </svg>
+                    </span>
+                    <span class="theme-icon theme-icon-moon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20.2 14.35A8.5 8.5 0 0 1 9.65 3.8a.55.55 0 0 0-.72-.67A9.5 9.5 0 1 0 20.87 15.07a.55.55 0 0 0-.67-.72Z"></path>
+                        </svg>
+                    </span>
+                </button>
+                <a href="#contact" class="btn btn-primary">Hire Me</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="section">
+            <div class="container hero-grid">
+                <div class="hero-content reveal">
+                    <div class="hero-tag">
+                        <i data-lucide="sparkles"></i>
+                        <span>iOS Software Engineer</span>
+                    </div>
+                    <h1 class="hero-title text-gradient">Ved Prakash Mishra</h1>
+                    <h2 class="hero-subtitle">Building Scalable & Smooth iOS Experiences</h2>
+                    <p class="hero-desc">
+                        I specialize in architecting high-performance mobile products using Swift, SwiftUI, and UIKit. Focused on clean architecture, optimized performance, and beautiful user interactions.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="2" data-suffix="+">0</span>
+                            <span class="stat-label">Years of Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="3" data-suffix="+">0</span>
+                            <span class="stat-label">Production Apps</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="40" data-suffix="%">0</span>
+                            <span class="stat-label">Debt Reduction</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual reveal">
+                    <!-- 3D Device Frame Mockup -->
+                    <div class="device-frame-3d" id="hero-device">
+                        <!-- Floating Components -->
+                        <div class="floating-ui-card f-card-1">
+                            <div class="ui-avatar">S</div>
+                            <div class="ui-text">
+                                <strong>SwiftUI Views</strong>
+                                <span class="ui-meta">Responsive & Clean</span>
+                            </div>
+                        </div>
+                        <div class="floating-ui-card f-card-2">
+                            <div class="ui-avatar" style="background:#5e5ce6">M</div>
+                            <div class="ui-text">
+                                <strong>MVVM Architecture</strong>
+                                <span class="ui-meta">Highly Scalable</span>
+                            </div>
+                        </div>
+                        
+                        <div class="device-screen">
+                            <div class="device-notch"></div>
+                            <div class="device-content">
+                                <div class="code-snippet">
+                                    <span class="code-comment">// SwiftUI iOS View</span>
+                                    <span><span class="code-keyword">struct</span> <span class="code-type">ProfileView</span>: <span class="code-type">View</span> {</span>
+                                    <span>  <span class="code-keyword">@StateObject</span> <span class="code-keyword">var</span> vm = <span class="code-type">ViewModel</span>()</span>
+                                    <span>  </span>
+                                    <span>  <span class="code-keyword">var</span> body: <span class="code-keyword">some</span> <span class="code-type">View</span> {</span>
+                                    <span>    <span class="code-type">VStack</span>(alignment: .leading) {</span>
+                                    <span>      <span class="code-type">Text</span>(<span class="code-str">"Ved Prakash"</span>)</span>
+                                    <span>        .font(.title)</span>
+                                    <span>      <span class="code-type">Text</span>(<span class="code-str">"iOS Developer"</span>)</span>
+                                    <span>    }</span>
+                                    <span>  }</span>
+                                    <span>}</span>
+                                </div>
+                                <div class="swiftui-mockup-app">
+                                    <div class="app-header">
+                                        <div class="app-icon">V</div>
+                                        <div class="app-bar"></div>
+                                    </div>
+                                    <div style="font-size:0.65rem; color:#fff;">Welcome to my iOS Space</div>
+                                    <div style="font-size:0.55rem; color:#8e8e93; line-height:1.3;">Explore projects and career details directly in this simulated app viewport.</div>
+                                    <a href="#projects" class="app-btn">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-title-wrapper reveal">
+                    <span class="section-tag">About Me</span>
+                    <h2 class="section-title text-gradient">Writing Clear & Reliable iOS Code</h2>
+                    <p class="section-desc">
+                        Engineering mobile products requires clean architecture and a strong focus on responsiveness. Here are the core pillars that guide my work.
+                    </p>
+                </div>
+                
+                <div class="pillars-grid reveal">
+                    <div class="glass-card pillar-card">
+                        <div class="pillar-icon-box">
+                            <i data-lucide="layers"></i>
+                        </div>
+                        <h3>Clean Architecture</h3>
+                        <p>Adhering to MVVM-C patterns, decoupling view layers from business logic to ensure codebases are modular, readable, and highly testable.</p>
+                    </div>
+                    
+                    <div class="glass-card pillar-card">
+                        <div class="pillar-icon-box">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3>Performance Tuning</h3>
+                        <p>Leveraging GCD and modern Async/Await for asynchronous processing, profiling with Instruments to fix memory leaks, and reducing layout reload loops.</p>
+                    </div>
+                    
+                    <div class="glass-card pillar-card">
+                        <div class="pillar-icon-box">
+                            <i data-lucide="smartphone"></i>
+                        </div>
+                        <h3>Native Development</h3>
+                        <p>Building high-fidelity user interfaces utilizing SwiftUI's declarative state management and UIKit's robust custom view hierarchies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <div class="section-title-wrapper reveal">
+                    <span class="section-tag">My Toolkit</span>
+                    <h2 class="section-title text-gradient">Technical Capabilities</h2>
+                    <p class="section-desc">
+                        A summary of languages, frameworks, and engineering tools I use to design and ship production-ready applications.
+                    </p>
+                </div>
+                
+                <div class="skills-grid reveal">
+                    <div class="skills-intro">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 12px;">Core Focus</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 16px;">
+                            My technical background centers heavily on the Apple Ecosystem. I prioritize writing native Swift, constructing robust architectures, and integrating modern frameworks that scale.
+                        </p>
+                        <p style="color: var(--text-secondary);">
+                            I consistently keep up with Swift developments, and am currently deepening my knowledge in Combine framework, concurrency paradigms, and complex custom shaders in SwiftUI.
+                        </p>
+                    </div>
+                    
+                    <div class="skills-interactive-container">
+                        <div class="glass-card skills-category-card">
+                            <h3><i data-lucide="code-2"></i> Languages & Frameworks</h3>
+                            <div class="badge-cloud">
+                                <span class="tech-badge primary-skill">Swift</span>
+                                <span class="tech-badge">SwiftUI</span>
+                                <span class="tech-badge">UIKit</span>
+                                <span class="tech-badge">Objective-C (Basic)</span>
+                                <span class="tech-badge">Combine</span>
+                                <span class="tech-badge">Core Data</span>
+                                <span class="tech-badge">Google Maps SDK</span>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card skills-category-card">
+                            <h3><i data-lucide="git-branch"></i> Architecture & APIs</h3>
+                            <div class="badge-cloud">
+                                <span class="tech-badge primary-skill">MVVM</span>
+                                <span class="tech-badge">Clean Architecture</span>
+                                <span class="tech-badge">RESTful APIs</span>
+                                <span class="tech-badge">GraphQL</span>
+                                <span class="tech-badge">WebSockets (Real-time)</span>
+                                <span class="tech-badge">JSON Parsing</span>
+                                <span class="tech-badge">Concurrency (Async/Await, GCD)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card skills-category-card">
+                            <h3><i data-lucide="settings"></i> Tools & Services</h3>
+                            <div class="badge-cloud">
+                                <span class="tech-badge">Xcode</span>
+                                <span class="tech-badge">Git & GitHub</span>
+                                <span class="tech-badge">Firebase (Auth, Realtime, Analytics)</span>
+                                <span class="tech-badge">Postman</span>
+                                <span class="tech-badge">Figma</span>
+                                <span class="tech-badge">App Store Connect</span>
+                                <span class="tech-badge">TestFlight</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience Timeline -->
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-title-wrapper reveal">
+                    <span class="section-tag">My Journey</span>
+                    <h2 class="section-title text-gradient">Professional Experience</h2>
+                    <p class="section-desc">
+                        A walkthrough of my career accomplishments and team roles in iOS development.
+                    </p>
+                </div>
+                
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    
+                    <!-- Job 1 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-node"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <div class="timeline-title-group">
+                                    <h3>Software Engineer</h3>
+                                    <div class="timeline-company">Tech Mahindra <span>| Noida, India</span></div>
+                                </div>
+                                <span class="timeline-date">Feb 2026 – Present</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Architecting and developing high-performance iOS applications using Swift and SwiftUI for enterprise-scale solutions.</li>
+                                <li>Designing scalable feature modules using MVVM architecture to ensure maintainability and clean code structure.</li>
+                                <li>Collaborating in cross-functional Agile teams to deliver reliable and production-ready mobile features.</li>
+                                <li>Contributing across the entire development lifecycle including feature planning, execution, testing, and App Store release.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Job 2 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-node"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <div class="timeline-title-group">
+                                    <h3>iOS Developer</h3>
+                                    <div class="timeline-company">SDLC Corp <span>| Noida, India</span></div>
+                                </div>
+                                <span class="timeline-date">Aug 2025 – Feb 2026</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Spearheaded a codebase refactoring initiative adopting Clean Architecture, reducing technical debt by <strong>40%</strong>.</li>
+                                <li>Led UI/UX enhancements and accessibility improvements, boosting user session time by <strong>15%</strong>.</li>
+                                <li>Optimized local and remote data fetch layers using REST APIs and GraphQL, dropping key endpoint latencies by <strong>25%</strong>.</li>
+                                <li>Wrote clean, modular Swift components while enforcing strict unit test policies (achieved <strong>75%+</strong> coverage).</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Job 3 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-node"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <div class="timeline-title-group">
+                                    <h3>iOS Developer</h3>
+                                    <div class="timeline-company">Octal IT Solution <span>| Jaipur, India</span></div>
+                                </div>
+                                <span class="timeline-date">Nov 2024 – Apr 2025</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Shipped responsive custom interfaces combining UIKit and SwiftUI, delivering a <strong>25%</strong> gain in UI interaction responsiveness.</li>
+                                <li>Handled critical integrations with remote REST interfaces and Firebase Realtime Database services.</li>
+                                <li>Collaborated in biweekly Agile sprints, lowering production crash logs by <strong>30%</strong> through extensive profiling.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Job 4 -->
+                    <div class="timeline-item reveal">
+                        <div class="timeline-node"></div>
+                        <div class="glass-card timeline-card">
+                            <div class="timeline-header">
+                                <div class="timeline-title-group">
+                                    <h3>iOS Developer</h3>
+                                    <div class="timeline-company">RipenApps Technologies <span>| Noida, India</span></div>
+                                </div>
+                                <span class="timeline-date">Oct 2023 – Sep 2024</span>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Designed and deployed scalable, feature-rich iOS apps, achieving a <strong>40%</strong> increase in active user retention.</li>
+                                <li>Built a reuse-focused interface kit following Apple HIG, cutting team feature assembly times by <strong>20%</strong>.</li>
+                                <li>Improved overall app speed using Grand Central Dispatch (GCD) for asynchronous workloads, reducing screen load lag by <strong>35%</strong>.</li>
+                                <li>Maintained a zero-rejection standard on App Store deployments through continuous compliance review.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Projects -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-title-wrapper reveal">
+                    <span class="section-tag">Featured Work</span>
+                    <h2 class="section-title text-gradient">Engineering Portfolio</h2>
+                    <p class="section-desc">
+                        A deep dive into three selected projects, featuring live interactive mockups.
+                    </p>
+                </div>
+                
+                <div class="projects-container">
+                    <!-- Project 1: SuperApp -->
+                    <div class="project-row reveal">
+                        <div class="project-mockup-wrap">
+                            <div class="project-device" id="device-superapp">
+                                <div class="project-app-screen">
+                                    <div class="app-status-bar">
+                                        <span>9:41</span>
+                                        <div style="display:flex; gap:4px; align-items:center;">
+                                            <i data-lucide="wifi" style="width:10px;height:10px;"></i>
+                                            <i data-lucide="battery" style="width:12px;height:12px;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="screen-superapp">
+                                        <div class="superapp-header">
+                                            <div class="superapp-user">
+                                                <div class="superapp-avatar">V</div>
+                                                <span>Hello, Ved</span>
+                                            </div>
+                                            <i data-lucide="bell" style="width:14px; height:14px;"></i>
+                                        </div>
+                                        
+                                        <div class="superapp-wallet">
+                                            <span class="wallet-label">Multi-Service Wallet</span>
+                                            <span class="wallet-amount">$1,452.80</span>
+                                            <div class="wallet-bar">
+                                                <div class="wallet-bar-fill"></div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="superapp-modules">
+                                            <div class="module-item active">
+                                                <i data-lucide="map-pin"></i>
+                                                <span>Maps</span>
+                                            </div>
+                                            <div class="module-item">
+                                                <i data-lucide="shopping-cart"></i>
+                                                <span>Shop</span>
+                                            </div>
+                                            <div class="module-item">
+                                                <i data-lucide="wallet"></i>
+                                                <span>Pay</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="superapp-map-feed">
+                                            <div class="simulated-map"></div>
+                                            <div class="map-route-line"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-info">
+                            <span class="project-type-label">Guinness / African Multi-Module Platform</span>
+                            <h3>SuperApp</h3>
+                            <p class="project-desc">
+                                A large-scale modular iOS application serving millions of users, combining payments, mapping/ride booking, e-commerce, and instant chat features.
+                            </p>
+                            <ul class="project-features">
+                                <li>Developed travel and maps modules integrating Google Maps SDK with custom polyline routing.</li>
+                                <li>Implemented real-time chat and driver location sync utilizing high-concurrency WebSockets.</li>
+                                <li>Designed robust transactional payment flows with secure token vault integrations.</li>
+                            </ul>
+                            <div class="project-tech-meta">
+                                <strong>Technologies:</strong> Swift, Modular Architecture, Google Maps SDK, WebSockets, E-commerce Checkout
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2: GoDide Rider -->
+                    <div class="project-row reveal">
+                        <div class="project-mockup-wrap">
+                            <div class="project-device" id="device-godide">
+                                <div class="project-app-screen">
+                                    <div class="app-status-bar">
+                                        <span>9:41</span>
+                                        <div style="display:flex; gap:4px; align-items:center;">
+                                            <i data-lucide="wifi" style="width:10px;height:10px;"></i>
+                                            <i data-lucide="battery" style="width:12px;height:12px;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="screen-godide">
+                                        <div class="godide-map-container">
+                                            <i data-lucide="map-pin" class="godide-pickup-pin"></i>
+                                            <i data-lucide="navigation" class="godide-drop-pin"></i>
+                                            <div class="godide-route-path"></div>
+                                        </div>
+                                        
+                                        <div class="godide-booking-sheet">
+                                            <div class="booking-title">Select Ride Class</div>
+                                            <div class="ride-options">
+                                                <div class="ride-option-row selected">
+                                                    <div class="option-left">
+                                                        <i data-lucide="car"></i>
+                                                        <strong>GoDide Premium</strong>
+                                                    </div>
+                                                    <span class="option-price">$18.40</span>
+                                                </div>
+                                            </div>
+                                            <div class="booking-button">Confirm Booking</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-info">
+                            <span class="project-type-label">Real-Time Mobility System</span>
+                            <h3>GoDide Rider</h3>
+                            <p class="project-desc">
+                                A consumer ride-hailing application with live driver tracking, media-stream calling, and intelligent state sync backend.
+                            </p>
+                            <ul class="project-features">
+                                <li>Architected the complete ride booking state engine in Swift using MVVM framework.</li>
+                                <li>Optimized Firebase Realtime Sync, increasing booking success rates by <strong>22%</strong>.</li>
+                                <li>Integrated WebRTC calls enabling user-to-driver audio/video calling within the sandbox.</li>
+                            </ul>
+                            <div class="project-tech-meta">
+                                <strong>Technologies:</strong> Swift, MVVM, Firebase, GraphQL, WebRTC Audio/Video, Location SDK
+                            </div>
+                            <div class="project-links">
+                                <a href="https://apps.apple.com/in/app/godiderider/id6504527583" target="_blank" rel="noopener" class="project-link-btn">
+                                    <i data-lucide="external-link"></i> App Store
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3: MindVault -->
+                    <div class="project-row reveal">
+                        <div class="project-mockup-wrap">
+                            <div class="project-device" id="device-mindvault">
+                                <div class="project-app-screen">
+                                    <div class="app-status-bar">
+                                        <span>9:41</span>
+                                        <div style="display:flex; gap:4px; align-items:center;">
+                                            <i data-lucide="wifi" style="width:10px;height:10px;"></i>
+                                            <i data-lucide="battery" style="width:12px;height:12px;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="screen-mindvault">
+                                        <div class="mindvault-header">
+                                            <h4>MindVault</h4>
+                                            <i data-lucide="settings" style="width:12px; height:12px; color:#8e8e93;"></i>
+                                        </div>
+                                        
+                                        <div class="mindvault-cal">
+                                            <span class="cal-day">M</span>
+                                            <span class="cal-day">T</span>
+                                            <span class="cal-day">W</span>
+                                            <span class="cal-day">T</span>
+                                            <span class="cal-day">F</span>
+                                            <span class="cal-day">S</span>
+                                            <span class="cal-day">S</span>
+                                            
+                                            <span class="cal-date">9</span>
+                                            <span class="cal-date">10</span>
+                                            <span class="cal-date active">11</span>
+                                            <span class="cal-date">12</span>
+                                            <span class="cal-date">13</span>
+                                            <span class="cal-date">14</span>
+                                            <span class="cal-date">15</span>
+                                        </div>
+                                        
+                                        <div class="mindvault-moods">
+                                            <div class="mood-title">How is your mood today?</div>
+                                            <div class="mood-emojis">
+                                                <span class="mood-emoji">😢</span>
+                                                <span class="mood-emoji">😐</span>
+                                                <span class="mood-emoji">😊</span>
+                                                <span class="mood-emoji">🤩</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mindvault-prompt">
+                                            <span class="prompt-tag">Daily Reflection</span>
+                                            <div class="prompt-text">What are you building in Swift today?</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="project-info">
+                            <span class="project-type-label">Self-Tracking & Reflection App</span>
+                            <h3>MindVault</h3>
+                            <p class="project-desc">
+                                A beautiful, offline-first personal space designed to help users track their mental wellness, document thoughts, and analyze mood trends.
+                            </p>
+                            <ul class="project-features">
+                                <li>Crafted a fluid custom SwiftUI layout with complex animations and sound feedback.</li>
+                                <li>Engineered an encrypted Core Data architecture for local database security.</li>
+                                <li>Configured system local notifications for flexible daily reminders.</li>
+                            </ul>
+                            <div class="project-tech-meta">
+                                <strong>Technologies:</strong> SwiftUI, Core Data Encryption, Local Notifications, Haptic Feedback
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/vedu-7488/MindVault-SwiftUI" target="_blank" rel="noopener" class="project-link-btn">
+                                    <i data-lucide="github"></i> Source Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements & Credentials Section -->
+        <section id="achievements" class="section">
+            <div class="container">
+                <div class="section-title-wrapper reveal">
+                    <span class="section-tag">Credentials</span>
+                    <h2 class="section-title text-gradient">Milestones & Certifications</h2>
+                    <p class="section-desc">
+                        A display of my continuous learning path, featuring certified badges from Credly.
+                    </p>
+                </div>
+                
+                <div class="achievements-grid reveal">
+                    <div class="achievements-intro">
+                        <h3 style="font-size: 1.5rem; margin-bottom: 16px;">Verified Learning Path</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 16px;">
+                            I actively validate my learning through verified badges, with a focus on artificial intelligence, neural networks, prompting, and advanced computer application concepts.
+                        </p>
+                        <p style="color: var(--text-secondary); margin-bottom: 24px;">
+                            I hold a <strong>Master of Computer Applications (MCA)</strong> degree from Meerut Institute of Engineering and Technology (2021-2023) and a <strong>BCA</strong> degree from M.M.H.A.P.U, Patna (2017-2020).
+                        </p>
+                        <a href="https://www.credly.com/users/ved-prakash-mishra.8ecaeff8/badges" target="_blank" rel="noopener" class="btn btn-secondary">
+                            <i data-lucide="external-link"></i> View Credly Profile
+                        </a>
+                    </div>
+                    
+                    <div class="achievements-showcase-panel">
+                        <div class="glass-card credly-badge-card">
+                            <div class="badge-graphic">
+                                <i data-lucide="brain"></i>
+                            </div>
+                            <h4>AI For Everyone</h4>
+                            <p>DeepLearning.AI</p>
+                        </div>
+                        
+                        <div class="glass-card credly-badge-card">
+                            <div class="badge-graphic">
+                                <i data-lucide="terminal"></i>
+                            </div>
+                            <h4>Prompting Essentials</h4>
+                            <p>Google Career Certificates</p>
+                        </div>
+                        
+                        <div class="glass-card credly-badge-card">
+                            <div class="badge-graphic">
+                                <i data-lucide="code-2"></i>
+                            </div>
+                            <h4>iOS Development</h4>
+                            <p>Udemy / Coursera Specialists</p>
+                        </div>
+                        
+                        <div class="glass-card credly-badge-card">
+                            <div class="badge-graphic">
+                                <i data-lucide="graduation-cap"></i>
+                            </div>
+                            <h4>Master of Applications</h4>
+                            <p>MIET Campus Academy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub Simulator Grid -->
+        <section id="github" class="section">
+            <div class="container">
+                <div class="section-title-wrapper reveal">
+                    <span class="section-tag">Activity</span>
+                    <h2 class="section-title text-gradient">Development Status</h2>
+                    <p class="section-desc">
+                        A simulator showing active commitments, code contributions, and architecture design updates.
+                    </p>
+                </div>
+                
+                <div class="glass-card github-dashboard-container reveal" id="git-board">
+                    <div class="github-header-row">
+                        <div class="github-user-info">
+                            <i data-lucide="github" class="github-icon-big"></i>
+                            <div class="github-meta-details">
+                                <h3>vedu-7488</h3>
+                                <p>Public repo updates, framework architectures, and SwiftUI components</p>
+                            </div>
+                        </div>
+                        <div class="github-stats-summary">
+                            <div class="github-stat-pill">468 Contributions</div>
+                            <div class="github-stat-pill">12 Repos</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Simulated grid pixels -->
+                    <div class="github-grid-scroll-wrap">
+                        <div class="github-grid-simulation" id="github-pixels-container">
+                            <!-- Injected dynamically by script.js -->
+                        </div>
+                    </div>
+                    
+                    <div class="github-grid-legend">
+                        <span>Less</span>
+                        <span class="git-pixel d-0"></span>
+                        <span class="git-pixel d-1"></span>
+                        <span class="git-pixel d-2"></span>
+                        <span class="git-pixel d-3"></span>
+                        <span class="git-pixel d-4"></span>
+                        <span>More</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-title-wrapper reveal">
+                    <span class="section-tag">Contact</span>
+                    <h2 class="section-title text-gradient">Let's Work Together</h2>
+                    <p class="section-desc">
+                        Available for iOS consulting, engineering contracts, and permanent roles. Get in touch to discuss details.
+                    </p>
+                </div>
+                
+                <div class="contact-layout reveal">
+                    <div class="contact-info-panel">
+                        <div class="contact-intro">
+                            <h3>Let's build something great.</h3>
+                            <p>Drop a line, request a technical assessment, or view social channels. I usually respond within 24 hours.</p>
+                        </div>
+                        
+                        <div class="contact-channels">
+                            <a href="mailto:vedmishra773@gmail.com" class="glass-card channel-card">
+                                <div class="channel-icon">
+                                    <i data-lucide="mail"></i>
+                                </div>
+                                <div class="channel-details">
+                                    <h4>Email Address</h4>
+                                    <p>vedmishra773@gmail.com</p>
+                                </div>
+                            </a>
+                            
+                            <a href="tel:+917488421450" class="glass-card channel-card">
+                                <div class="channel-icon">
+                                    <i data-lucide="phone"></i>
+                                </div>
+                                <div class="channel-details">
+                                    <h4>Phone Number</h4>
+                                    <p>+91 74884 21450</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card contact-form-card">
+                        <form class="contact-form" id="contact-form" action="#" method="POST">
+                            <div class="form-group">
+                                <input type="text" id="form-name" class="form-input" required placeholder=" ">
+                                <label for="form-name" class="form-label">Full Name</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="email" id="form-email" class="form-input" required placeholder=" ">
+                                <label for="form-email" class="form-label">Email Address</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <textarea id="form-msg" class="form-input" required placeholder=" "></textarea>
+                                <label for="form-msg" class="form-label">Message Details</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                <i data-lucide="send"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid-container">
+            <div class="footer-brand-col">
+                <a href="#" class="logo">
+                    <i data-lucide="smartphone"></i>
+                    <span>Ved</span>.dev
+                </a>
+                <p class="footer-brand-desc">
+                    Architecting high-performance, responsive iOS products with Swift, SwiftUI, and MVVM Clean Architecture.
+                </p>
+            </div>
+            
+            <div class="footer-nav-col">
+                <h4>Navigation</h4>
+                <ul class="footer-nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact-col">
+                <h4>Contact Details</h4>
+                <ul class="footer-contact-info">
+                    <li><i data-lucide="mail"></i> <a href="mailto:vedmishra773@gmail.com">vedmishra773@gmail.com</a></li>
+                    <li><i data-lucide="phone"></i> <a href="tel:+917488421450">+91 74884 21450</a></li>
+                    <li><i data-lucide="map-pin"></i> Noida, Uttar Pradesh, India</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p class="footer-text">
+                    &copy; <span id="footer-year">2026</span> Ved Prakash Mishra. All rights reserved.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://github.com/vedu-7488" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ved-prakash-mishra-9988a8220" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="mailto:vedmishra773@gmail.com" class="social-link" aria-label="Email">
+                        <i data-lucide="mail"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script file -->
+    <script src="script.js"></script>
+</body>
+</html>
